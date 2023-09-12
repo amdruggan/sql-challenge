@@ -14,3 +14,9 @@ After having created the database schema and imported the data, these are the qu
 6. List each employee in the Sales department, including their employee number, last name, and first name.
 7. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
 8. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
+
+Code location:
+1. The provided data for this project is located in the following path: '../EmployeeSQL/Resources - Data/'
+2. The database diagram that the schema is based on was creating using QuickDBD (quickdatabasediagrams.com) and is locaed in the following path: '../EmployeeSQL/'. It is a .jpg file titled 'EmployeesSQL DB Model Diagram.jpg'.
+3. The schema creation SQL query code is located in the following path: '../EmployeeSQL/' and the file is titled 'DB_Schema_Creation.sql'
+4. The analysis queries for the above listed questions is in the following path: '../EmployeeSQL/' and the file is titled 'Data_Analysis(Questions_and_Queries).sql'. 
