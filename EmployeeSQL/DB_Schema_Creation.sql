@@ -2,14 +2,14 @@
 --Schema is created in a manner where all table references occur after that table and it's columns/primary and foreign keys are created and referenceable.
 
 --Create table: titles using title_id as primary key
-CREATE TABLE titles (
-	title_id VARCHAR NOT NULL,
-	title VARCHAR NOT NULL,
+create table titles (
+	title_id varchar not null,
+	title varchar not null,
 	PRIMARY KEY (title_id)
 );
 	
 --Create table: employees using emp_no as primary key and emp_title_id as foreign key referencing titles table
-CREATE TABLE employees (
+create table employees (
 	emp_no int not null,
 	emp_title_id varchar not null,
 	birth_date date not null,
@@ -22,15 +22,15 @@ CREATE TABLE employees (
 );
 
 --Create table: salaries using emp_no as primary key and emp_no as foreign key referencing employees table
-CREATE TABLE salaries (
-	emp_no INT NOT NULL,
+create table salaries (
+	emp_no int not null,
 	salary int not null,
 	primary key (emp_no),
 	foreign key (emp_no) references employees (emp_no)
 );
 	
 --Create table: departments using dept_no as primary key
-CREATE TABLE departments (
+create table departments (
 	dept_no varchar not null,
 	dept_name varchar not null,
 	primary key (dept_no)
@@ -38,7 +38,7 @@ CREATE TABLE departments (
 	
 --Create table: dept_emp using emp_no and dept_no as composite primary key
 --Additionally emp_no and dept_no are foreign keys referencing employees and departments tables respectively
-CREATE TABLE dept_emp (
+create table dept_emp (
 	emp_no int not null,
 	dept_no varchar not null,
 	primary key (emp_no, dept_no),
@@ -48,7 +48,7 @@ CREATE TABLE dept_emp (
 	
 --Create table: dept_manager using emp_no and dept_no as composite primary key
 --Additionally emp_no and dept_no are foreign keys referencing employees and departments tables respectively
-CREATE TABLE dept_manager (
+create table dept_manager (
     dept_no varchar not null, 
     emp_no int not null, 
     primary key (dept_no, emp_no), 
